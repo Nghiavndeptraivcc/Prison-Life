@@ -1,0 +1,141 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "NIGHT HUB", HidePremium = false, IntroText = "NIGHT HUB", SaveConfig = true, ConfigFolder = "NIGHT HUB Libarly"})
+
+---Value----
+
+
+---Players Tab----
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+---chose----
+local Section = Tab:AddSection({
+	Name = "Walkspeed"
+})
+
+Tab:AddSlider({
+	Name = "WalkSpeed",
+	Min = 16,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WS",
+	Callback = function(Value)
+	 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end    
+   })
+
+local Section = Tab:AddSection({
+	Name = "JumpHegit"
+})
+
+Tab:AddSlider({
+	Name = "Hegit",
+	Min = 50,
+	Max = 200,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Hegit",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+Tab:AddButton({
+	Name = "Delete Doors",
+	Callback = function()
+      	game.Workspace.Doors:Destroy()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Delete Glass",
+	Callback = function()
+      	game.Workspace.Prison_Halls.glass:Destroy()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Delete Windows Police",
+	Callback = function()
+      	game.Workspace.Prison_Guard_Outpost.doorwindow:Destroy()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Delete Wall Prison",
+	Callback = function()
+      	game.Workspace.Prison_Guard_Outpost:Destroy()
+  	end    
+})
+
+----Tab 2-----
+
+local Tab = Window:MakeTab({
+	Name = "Other",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Teleport to gun m9,shotgub",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(822.47583, 100.393982, 2252.36279, 0.99790746, 1.38418725e-08, -0.0646578968, -1.53431348e-08, 1, -2.27220003e-08, 0.0646578968, 2.36665088e-08, 0.99790746)
+	end  
+})
+
+Tab:AddButton({
+	Name = "Teleport to gun AK47,SHOTGUN",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-937.695251, 94.1287613, 2060.94775, 0.751154721, 1.99637484e-09, 0.660126209, -1.89258085e-08, 1, 1.85113631e-08, -0.660126209, -2.639832e-08, 0.751154721)
+	end 
+})
+
+
+Tab:AddButton({
+	Name = "Teleport to Yar",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(778.172119, 97.9999237, 2471.50903, -0.970815718, -2.6353522e-08, 0.239826754, -1.50474726e-08, 1, 4.89736784e-08, -0.239826754, 4.3935632e-08, -0.970815718)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Teleport to exit to room ward",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(942.235535, 114.790039, 2468.41309, -0.572001159, 3.070598e-08, 0.820252836, 7.25985601e-08, 1, 1.31916433e-08, -0.820252836, 6.70948097e-08, -0.572001159)
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Teleport to Cafe,Food room ",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(919.253723, 99.9899368, 2246.62646, 0.966050625, 1.00254297e-07, -0.258352757, -9.95794949e-08, 1, 1.56973776e-08, 0.258352757, 1.05621751e-08, 0.966050625)
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Teleport to Safe Zone",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(827.103943, 118.989983, 2338.30664, -0.999609113, -2.4758041e-08, -0.0279584136, -2.52725396e-08, 1, 1.80489188e-08, 0.0279584136, 1.87484446e-08, -0.999609113)
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Teleport to place of escape",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(990.629395, 100.939949, 2167.88525, 0.258864343, 0, 0.965913713, 0, 1, 0, -0.965913713, 0, 0.258864343)
+  	end    
+})
+
+
+
+print ("SUB TO ME ")
+
+OrionLib:Init()
