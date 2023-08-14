@@ -2,6 +2,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "NIGHT HUB", HidePremium = false, IntroText = "NIGHT HUB", SaveConfig = true, ConfigFolder = "NIGHT HUB Libarly"})
 
 ---Value----
+
 OrionLib:MakeNotification({
 	Name = "NIGHT BOT",
 	Content = "Chào Mừng Đến với Bình Dương Vô Tận",
@@ -10,6 +11,7 @@ OrionLib:MakeNotification({
 })
 
 ---Players Tab----
+
 local Tab = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
@@ -102,7 +104,7 @@ Tab:AddButton({
 
 
 Tab:AddButton({
-	Name = "Teleport to Yar",
+	Name = "Teleport to Gym room",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(778.172119, 97.9999237, 2471.50903, -0.970815718, -2.6353522e-08, 0.239826754, -1.50474726e-08, 1, 4.89736784e-08, -0.239826754, 4.3935632e-08, -0.970815718)
   	end    
