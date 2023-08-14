@@ -9,7 +9,7 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 7,
 })
-
+------Function-------
 ---Players Tab----
 
 local Tab = Window:MakeTab({
@@ -80,6 +80,8 @@ Tab:AddButton({
   	end    
 })
 
+
+
 ----Tab 2-----
 
 local Tab = Window:MakeTab({
@@ -141,6 +143,12 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Teleport to Criminals Home",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-933.977722, 125.277466, 2048.82642, -0.552054703, 9.56581019e-08, 0.833807886, 6.03894605e-08, 1, -7.4741223e-08, -0.833807886, 9.09196629e-09, -0.552054703)
+	end 
+})
 
 
 print ("SUB TO ME ")
